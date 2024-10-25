@@ -2,7 +2,7 @@
     ros__parameters:
         image_transport: raw    # image format
         family: 36h11           # tag family name
-        size: 0.173             # tag edge size in meter
+        # size: 0.2944           # tag edge size in meter
         max_hamming: 0          # maximum allowed hamming distance (corrected bits)
 
         # see "apriltag.h" 'struct apriltag_detector' for more documentation on these optional parameters
@@ -16,6 +16,8 @@
 
         # optional list of tags
         tag:
-            ids: [9, 14]            # tag ID
-            frames: [base, object]  # optional frame name
-            sizes: [0.162, 0.162]   # optional tag-specific edge size
+            ids: [0, 1]            # tag ID
+            frames: [tag0, tag1]  # optional frame name
+            sizes: [0.2944, 0.1472]   # tilted or vertical tags
+            # sizes: [0.2, 0.08]   # horizontal tags
+            # sizes: [0.16928, 0.08]   # horizontal tags
